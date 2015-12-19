@@ -1,0 +1,78 @@
+﻿.content{
+    width: 800px;
+    margin: 0 auto;
+    border: 1px solid #f7f7f7;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    background: #f7f7f7;
+    text-align: center;
+    font-family: Arial, Verdana, sans-serif;
+}
+.tableBlock{
+    width: 600px;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+.table{
+    border: 2px solid #b3b3b3;
+    border-collapse: collapse;
+    width: 600px;  
+}
+.header{
+    background: #b3b3b3;
+    color: aliceblue;
+    font-weight: bold;
+}
+.header td{
+    height: 30px;
+}
+
+td{
+    border: 2px solid #b3b3b3;
+    height: 50px
+}
+.pathBlock{
+    margin-top: 60px;
+    margin-left: 100px;
+    width: 600px; 
+    text-align: left;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    color: #7e7e7e;
+}
+
+#path{
+    font-weight: bold;
+    color: #474747;
+}
+.exception{
+    margin-top: 5px;
+    margin-left: 100px;
+    width: 600px; 
+    text-align: left;
+    font-size: 0.9em;
+    color: salmon;
+}
+
+.directoryEntries{
+    border: 2px solid #f2f2f2;
+    overflow: visible;
+    margin-top: 5px;
+    margin-left: 100px;
+    margin-bottom: 20px;
+    padding-left: 10px; 
+    min-height: 500px;
+    width: 590px;
+    float:left;
+    text-align: left;
+    color: #66b0df;
+    font: 1em/0.5em sans-serif;
+}
+
+.directory p:hover{
+    text-decoration: underline;
+    text-decoration-style: solid;
+    cursor: pointer;
+}

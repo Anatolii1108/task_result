@@ -1,0 +1,48 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html ng-app="BrawsingDirectoriesApp">
+<head>
+    <meta charset="utf-8">
+    <title>Browsing"</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/angular")
+    <script type="text/javascript">
+        angular.module("BrawsingDirectoriesApp", []);
+    </script>
+    <script src="~/Scripts/Controllers/DirAndFileController.js"></script>
+</head>
+<body ng-controller="DirectoriesCtrl">
+    <div class="content">
+        <div class="tableBlock">
+            <table class="table">
+                <tr class="header"><td>Less 10Mb</td><td>10Mb-50Mb</td><td>More 100Mb</td></tr>
+                <tr><td>{{filesCountLess10Mb}}</td><td>{{filesCount10_50Mb}}</td><td>{{filesCountMore50Mb}}</td></tr>
+            </table>
+        </div>
+        <div class="pathBlock"><span id="path">Current path:</span> {{currentPath}}</div>
+        <div class="exception" ng-show="exception">Error: No permission or resource is not ready for use</div>
+        <div class="directoryEntries">
+
+            <div class="directory" ng-show="showLogicalDrives">
+                <p  ng-click="logicalDrives()">..</p>
+            </div>
+
+            <div class="directory" ng-show="showParentDirectory">
+                <p ng-click="directoryEntries(parentDirectory)">..</p>
+            </div>
+
+            <div class="directory" ng-repeat="directory in directories.path">
+                <p ng-click="directoryEntries(directory)">{{directories.name[$index]}}</p>
+            </div>
+            <div class="file" ng-repeat="file in files">
+                <p>{{file}}</p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
